@@ -95,7 +95,7 @@
     "sshKeyPath": "[concat('/home/',parameters('adminUsername'),'/.ssh/authorized_keys')]",
 
     "baseUriAzureCloud": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/bosh-setup/",
-    "baseUriAzureChinaCloud": "https://cloudfoundry.blob.core.chinacloudapi.cn/",
+    "baseUriAzureChinaCloud": "https://raw.githubusercontent.com/samueldeng/azure-quickstart-templates/master/bosh-setup/",
 
     "filesToDownloadAzureCloud": [
       "[uri(variables('baseUriAzureCloud'), 'scripts/setup_env')]",
@@ -110,16 +110,16 @@
       "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.14.1/cf-cli-installer_6.14.1_x86-64.deb"
     ],
     "filesToDownloadAzureChinaCloud": [
-      "[uri(variables('baseUriAzureChinaCloud'), 'scripts/setup_env')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'scripts/setup_env.py')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'scripts/create_cert.sh')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'scripts/init.sh')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'scripts/deploy_bosh.sh')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'scripts/deploy_cloudfoundry.sh')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'manifests/bosh.yml')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'manifests/single-vm-cf.yml')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'manifests/multiple-vm-cf.yml')]",
-      "[uri(variables('baseUriAzureChinaCloud'), 'cf-cli/cf.deb')]"
+      "[uri(variables('baseUriAzureChinaCloud'), 'scripts_china/setup_env')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'script_china/setup_env.py')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'scripts_china/create_cert.sh')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'scripts_china/init.sh')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'scripts_china/deploy_bosh.sh')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'scripts_china/deploy_cloudfoundry.sh')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'manifests_china/bosh.yml')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'manifests_china/single-vm-cf.yml')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'manifests_china/multiple-vm-cf.yml')]",
+      "[uri(variables('baseUriAzureChinaCloud'), 'cf-cli_china/cf.deb')]"
     ],
     "filesToDownload": "[variables(concat('filesToDownload', parameters('environment')))]",
 
