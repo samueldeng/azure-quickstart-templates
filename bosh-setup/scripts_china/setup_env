@@ -20,7 +20,7 @@ set -e
 
 apt-get -y install python-pip jq
 
-pip install msrest msrestazure azure==2.0.0rc1 azure-storage netaddr --proxy http://shuol-bosh-test.chinacloudapp.cn/pypi/simple/
+#pip install msrest msrestazure azure==2.0.0rc1 azure-storage netaddr
 
 seq_no=$(cat ../../mrseq)
 custom_script_config_file="../../config/${seq_no}.settings"
