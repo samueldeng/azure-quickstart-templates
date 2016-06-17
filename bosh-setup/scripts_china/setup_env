@@ -20,9 +20,7 @@ set -e
 
 apt-get -y install python-pip jq
 
-mkdir /root/.pip
-wget https://raw.githubusercontent.com/samueldeng/azure-quickstart-templates/master/bosh-setup/scripts_china/pip.conf -O /root/.pip/pip.conf
-pip install msrest msrestazure azure==2.0.0rc1 azure-storage netaddr
+pip install msrest msrestazure azure==2.0.0rc1 azure-storage netaddr -i http://mirrors.aliyun.com/pypi/simple/
 
 seq_no=$(cat ../../mrseq)
 custom_script_config_file="../../config/${seq_no}.settings"
